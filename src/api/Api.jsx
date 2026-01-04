@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-const apiUrl = 'https://ec-course-api.hexschool.io/v2';
-const path = "noratest";
+const apiUrl = import.meta.env.VITE_API_URL;
+const path = import.meta.env.VITE_API_PATH;
+
+export { apiUrl, path };
+
 
 //登入API
 export const postSignin = (data) =>{
